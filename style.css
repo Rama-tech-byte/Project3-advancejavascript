@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background: #f5f6f7;
+  color: #212529;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tracker-navbar {
+  min-height: 67px;
+  background: #198754;
+  box-shadow: 0 2px 5px rgba(0,0,0,.12);
+}
+.tracker-navbar .navbar-brand { font-size: 1.45rem; }
+.form-card, .list-card { border: 0; border-radius: 8px; overflow: hidden; }
+.section-title { color: #198754; font-size: 1.55rem; font-weight: 700; }
+.form-label { font-size: 1.05rem; font-weight: 700; }
+.form-control { min-height: 48px; font-size: 1rem; border-color: #d8dee3; }
+.form-control:focus { border-color: #198754; box-shadow: 0 0 0 .2rem rgba(25,135,84,.15); }
+.save-button { min-height: 50px; font-size: 1.1rem; font-weight: 700; background: #198754; border-color: #198754; }
+.list-heading { min-height: 92px; padding: 20px 22px; background: #fff; }
+.list-heading h2 { font-size: 1.45rem; font-weight: 700; }
+.total-badge { padding: 7px 13px; border-radius: 8px; background: #dc3545; color: white; font-size: 1.15rem; font-weight: 700; white-space: nowrap; }
+.expense-item { min-height: 78px; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 1.05rem; font-weight: 700; }
+.expense-name { overflow-wrap: anywhere; }
+.expense-amount { color: #dc3545; white-space: nowrap; }
+.empty-state { padding: 28px 20px; color: #6c757d; text-align: center; font-weight: 400; }
+@media (max-width: 576px) {
+  .list-heading { min-height: 75px; padding: 16px; gap: 10px; }
+  .list-heading h2 { font-size: 1.15rem; }
+  .total-badge { font-size: .95rem; }
+  .expense-item { padding: 16px; font-size: .95rem; }
+}
+
+.delete-button {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.expense-item .expense-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #clearExpenses {
+    font-size: .75rem;
+    padding: 6px 8px;
+  }
+}

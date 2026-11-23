@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark tracker-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-wallet me-2"></i>Expense Tracker</a>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="row g-4">
+      <section class="col-lg-5">
+        <div class="card form-card shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="section-title mb-4">Tambah Pengeluaran</h2>
+
+            <div id="alertMessage" class="alert alert-danger d-none" role="alert">
+              <i class="fa-solid fa-triangle-exclamation me-2"></i>
+              Harap isi nama dan nominal pengeluaran!
+            </div>
+
+            <form id="expenseForm" novalidate>
+              <div class="mb-3">
+                <label for="expenseName" class="form-label">Nama Pengeluaran</label>
+                <input type="text" class="form-control" id="expenseName" placeholder="Contoh: Makan Siang">
+              </div>
+              <div class="mb-4">
+                <label for="expenseAmount" class="form-label">Nominal / Harga (Rp)</label>
+                <input type="number" class="form-control" id="expenseAmount" placeholder="Contoh: 25000" min="1" step="1">
+              </div>
+              <button type="submit" class="btn btn-success w-100 save-button">
+                <i class="fa-solid r fa-circle-plus me-2"></i>Simpan Data
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-lg-7">
+        <div class="card list-card shadow-sm">
+          <div class="card-header list-heading d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Daftar Pengeluaran</h2>
+            <div class="d-flex align-items-center gap-2">
+              <span id="totalExpense" class="total-badge">Rp 0</span>
+              <button type="button" id="clearExpenses" class="btn btn-outline-danger btn-sm">
+                <i class="fa-solid fa-trash-can me-1"></i> Hapus Semua
+              </button>
+            </div>
+          </div>
+          <ul id="expenseList" class="list-group list-group-flush"></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
